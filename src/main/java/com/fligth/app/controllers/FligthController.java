@@ -28,6 +28,9 @@ public class FligthController {
     public ResponseEntity<?> findById(@PathVariable("id") Long id) {
         Optional<Fligth> fligth = fligthService.findById(id);
         if (fligth.isPresent()) {
+
+            //entra si se encontró un vuelo con el id dado, si no se encontró se devuelve un 404
+            //entra si se encontró un vuelo con el id dado, si no se encontró se devuelve un 404
             //entra si se encontró un vuelo con el id dado, si no se encontró se devuelve un 404
             return ResponseEntity.ok(fligth.get());
         } else {
